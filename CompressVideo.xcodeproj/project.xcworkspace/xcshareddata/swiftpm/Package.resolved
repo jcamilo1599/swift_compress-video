@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "lightcompressor_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AbedElazizShe/LightCompressor_iOS",
+      "state" : {
+        "revision" : "3d21a0c8bb653fc00daf11ea82c590aa8d70c50b",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

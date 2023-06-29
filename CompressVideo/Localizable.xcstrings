@@ -1,0 +1,43 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "compressVideo" : {
+
+    },
+    "select" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Video"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar Video"
+          }
+        }
+      }
+    },
+    "selectText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a video from your photo gallery to compress it."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona un video de tu galería de fotos para comprimirlo."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
