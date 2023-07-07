@@ -11,10 +11,21 @@ struct ContentView: View {
     @State private var isLoading = false
     @State private var loadingProgress: String?
     
+    // Alerta que informa el estado de la conversión
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertDescription = ""
+    
     var body: some View {
         ZStack {
             NavigationView {
-                HomeView(isLoading: $isLoading, loadingProgress: $loadingProgress)
+                HomeView(
+                    isLoading: $isLoading,
+                    loadingProgress: $loadingProgress,
+                    showAlert: $showAlert,
+                    alertTitle: $alertTitle,
+                    alertDescription: $alertDescription
+                )
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .accentColor(.orange)
@@ -23,6 +34,13 @@ struct ContentView: View {
             if isLoading {
                 LoadingView(loadingProgress: $loadingProgress)
             }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(NSLocalizedString(alertTitle, comment: "")),
+                message: Text(NSLocalizedString(alertDescription, comment: "")),
+                dismissButton: .default(Text("close"))
+            )
         }
     }
 }

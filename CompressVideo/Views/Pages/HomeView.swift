@@ -12,6 +12,10 @@ struct HomeView: View {
     @Binding var isLoading: Bool;
     @Binding var loadingProgress: String?
     
+    @Binding var showAlert: Bool
+    @Binding var alertTitle: String
+    @Binding var alertDescription: String
+    
     // Variables de la vista para el manejo de la selección del video
     @State private var showVideoPicker = false
     @State private var videoURL: URL?
@@ -88,10 +92,18 @@ struct HomeView: View {
             PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: videoURL!)
         }) { success, error in
             if success {
-                print("Video guardado en la galería de fotos")
+                alertTitle = "okTitle"
+                alertDescription = "okDescription"
+                
+                // Limpia las variables donde se guardo información del video
+                videoURL = nil
+                videoThumbnails = []
             } else if let error = error {
-                print("Error al guardar el video: \(error.localizedDescription)")
+                alertTitle = "errorTitle"
+                alertDescription = "errorDescription"
             }
+            
+            showAlert = true
         }
     }
 }
@@ -99,6 +111,9 @@ struct HomeView: View {
 #Preview {
     HomeView(
         isLoading: .constant(false),
-        loadingProgress: .constant("")
+        loadingProgress: .constant(""),
+        showAlert: .constant(false),
+        alertTitle: .constant(""),
+        alertDescription: .constant("")
     )
 }
