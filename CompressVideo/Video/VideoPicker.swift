@@ -10,6 +10,7 @@ import PhotosUI
 
 struct VideoPicker: UIViewControllerRepresentable {
     @Binding var videoURL: URL?
+    @Binding var videoThumbnails: [UIImage]
     @Binding var isLoading: Bool
     @Binding var loadingProgress: String?
 
@@ -56,9 +57,18 @@ struct VideoPicker: UIViewControllerRepresentable {
                         DispatchQueue.main.async {
                             self.parent.loadingProgress = "0%"
                         }
+                        
+                        // Crea las miniaturas del video
+                        VideosHelper.toImageList(from: url, interval: 6, maxImages: 10) { thumbnails in
+                            self.parent.videoThumbnails = thumbnails
+                        }
 
                         // Comprime y guarda el video
-                        VideosHelper.compressAndSave(url: url, progress: self.parent.progressSave, completion: self.parent.completionSave)
+                        VideosHelper.compressAndSave(
+                            url: url,
+                            progress: self.parent.progressSave,
+                            completion: self.parent.completionSave
+                        )
                     } else {
                         DispatchQueue.main.async {
                             self.parent.isLoading = false

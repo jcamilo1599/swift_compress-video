@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0D1513762A4CD89700035076 /* LightCompressor in Frameworks */ = {isa = PBXBuildFile; productRef = 0D1513752A4CD89700035076 /* LightCompressor */; };
 		0D1513782A4CD9C500035076 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1513772A4CD9C500035076 /* VideoHelper.swift */; };
+		0D4988CA2A5877D10009E24B /* ImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4988C92A5877D10009E24B /* ImagesHelper.swift */; };
+		0D4988CE2A587DD90009E24B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4988CD2A587DD90009E24B /* HomeView.swift */; };
+		0D4988D12A587E0B0009E24B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4988D02A587E0B0009E24B /* LoadingView.swift */; };
 		0D8BE96B2A4B4467004ED21F /* CompressVideoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BE96A2A4B4467004ED21F /* CompressVideoApp.swift */; };
 		0D8BE96D2A4B4467004ED21F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BE96C2A4B4467004ED21F /* ContentView.swift */; };
 		0D8BE96F2A4B4468004ED21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8BE96E2A4B4468004ED21F /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		0D1513772A4CD9C500035076 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		0D4988C92A5877D10009E24B /* ImagesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesHelper.swift; sourceTree = "<group>"; };
+		0D4988CD2A587DD90009E24B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0D4988D02A587E0B0009E24B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0D8BE9672A4B4467004ED21F /* CompressVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompressVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8BE96A2A4B4467004ED21F /* CompressVideoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressVideoApp.swift; sourceTree = "<group>"; };
 		0D8BE96C2A4B4467004ED21F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +50,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D4988C72A58777D0009E24B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				0D1513772A4CD9C500035076 /* VideoHelper.swift */,
+				0D8EAA7E2A4D4A0500B4B7E1 /* VideoPicker.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		0D4988C82A5877BE0009E24B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0D4988C92A5877D10009E24B /* ImagesHelper.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0D4988CB2A587DC60009E24B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D4988CF2A587E000009E24B /* Atoms */,
+				0D4988CC2A587DCE0009E24B /* Pages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D4988CC2A587DCE0009E24B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0D4988CD2A587DD90009E24B /* HomeView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		0D4988CF2A587E000009E24B /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				0D4988D02A587E0B0009E24B /* LoadingView.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
 		0D8BE95E2A4B4467004ED21F = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +113,10 @@
 		0D8BE9692A4B4467004ED21F /* CompressVideo */ = {
 			isa = PBXGroup;
 			children = (
+				0D4988CB2A587DC60009E24B /* Views */,
+				0D4988C82A5877BE0009E24B /* Images */,
+				0D4988C72A58777D0009E24B /* Video */,
 				0D8BE96A2A4B4467004ED21F /* CompressVideoApp.swift */,
-				0D1513772A4CD9C500035076 /* VideoHelper.swift */,
-				0D8EAA7E2A4D4A0500B4B7E1 /* VideoPicker.swift */,
 				0D8BE96C2A4B4467004ED21F /* ContentView.swift */,
 				0D8EAA782A4D37E000B4B7E1 /* Localizable.xcstrings */,
 				0D8BE96E2A4B4468004ED21F /* Assets.xcassets */,
@@ -167,7 +216,10 @@
 				0D1513782A4CD9C500035076 /* VideoHelper.swift in Sources */,
 				0D8EAA7F2A4D4A0500B4B7E1 /* VideoPicker.swift in Sources */,
 				0D8BE96D2A4B4467004ED21F /* ContentView.swift in Sources */,
+				0D4988CE2A587DD90009E24B /* HomeView.swift in Sources */,
 				0D8BE96B2A4B4467004ED21F /* CompressVideoApp.swift in Sources */,
+				0D4988D12A587E0B0009E24B /* LoadingView.swift in Sources */,
+				0D4988CA2A5877D10009E24B /* ImagesHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +356,14 @@
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Permiso para guardar videos en la biblioteca de fotos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permiso para guardar videos en la biblioteca de fotos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,11 +388,14 @@
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Permiso para guardar videos en la biblioteca de fotos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permiso para guardar videos en la biblioteca de fotos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,10 +11,7 @@ import SwiftUI
 struct CompressVideoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(
-                isLoading: .constant(false),
-                loadingProgress: .constant("")
-            )
+            ContentView()
         }
     }
 }

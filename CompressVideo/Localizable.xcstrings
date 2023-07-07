@@ -2,7 +2,20 @@
   "sourceLanguage" : "en",
   "strings" : {
     "compressVideo" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compress Video"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprimir Video"
+          }
+        }
+      }
     },
     "select" : {
       "extractionState" : "manual",
@@ -34,6 +47,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecciona un video de tu galería de fotos para comprimirlo."
+          }
+        }
+      }
+    },
+    "thumbnails" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIDEO THUMBNAILS"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MINIATURAS DEL VIDEO"
           }
         }
       }
