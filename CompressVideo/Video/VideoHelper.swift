@@ -11,17 +11,20 @@ import Foundation
 import LightCompressor
 
 class VideosHelper {
+    /// Obtiene la ruta y nombre para el video
+    static func getPath(type: String) -> String {
+        return ProcessInfo.processInfo.globallyUniqueString + "." + type
+    }
+    
     /// Obtiene el directorio temporal para el video
     static func temporaryPath(type: String) -> URL {
         let temporaryDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory())
-        let temporaryFilename = ProcessInfo.processInfo.globallyUniqueString + "." + type
-        
-        return temporaryDirectoryURL.appendingPathComponent(temporaryFilename)
+        return temporaryDirectoryURL.appendingPathComponent(getPath(type: type))
     }
     
     /// Comprime y guarda el video
     static func compressAndSave(url: URL, progress: @escaping (String?) -> Void, completion: @escaping (URL?) -> Void) {
-        let temporaryFile = VideosHelper.temporaryPath(type: "mov")
+        let temporaryFile = VideosHelper.temporaryPath(type: "mp4")
         let videoCompressor = LightCompressor()
         
         _ = videoCompressor.compressVideo(

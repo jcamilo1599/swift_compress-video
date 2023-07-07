@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Photos
 
 struct HomeView: View {
     @Binding var isLoading: Bool;
@@ -62,8 +63,35 @@ struct HomeView: View {
                         }
                     }
                 }
+                
+                if videoURL != nil {
+                    Section(header: Text("save")) {
+                        HStack {
+                            Spacer()
+                            Button(action: saveVideo) {
+                                Text("save")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.orange)
+                                    .cornerRadius(10)
+                            }
+                        }
+                    }
+                }
             }
             .navigationTitle("compressVideo")
+        }
+    }
+    
+    private func saveVideo() {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: videoURL!)
+        }) { success, error in
+            if success {
+                print("Video guardado en la galería de fotos")
+            } else if let error = error {
+                print("Error al guardar el video: \(error.localizedDescription)")
+            }
         }
     }
 }

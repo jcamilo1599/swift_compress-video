@@ -17,6 +17,22 @@
         }
       }
     },
+    "save" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Video"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar Video"
+          }
+        }
+      }
+    },
     "select" : {
       "extractionState" : "manual",
       "localizations" : {
