@@ -98,7 +98,7 @@ struct HomeView: View {
                 // Limpia las variables donde se guardo información del video
                 videoURL = nil
                 videoThumbnails = []
-            } else if let error = error {
+            } else if error != nil {
                 alertTitle = "errorTitle"
                 alertDescription = "errorDescription"
             }
